@@ -1,4 +1,7 @@
 virtualenvwrapper='virtualenvwrapper.sh'
+if [[ $VENV_LAZY == "true" ]]; then
+  virtualenvwrapper="virtualenvwrapper_lazy.sh"
+fi
 
 if (( $+commands[$virtualenvwrapper] )); then
   function {
